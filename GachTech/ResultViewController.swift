@@ -16,8 +16,11 @@ class ResultViewController: UIViewController {
     //モンスターを表示する画像
     @IBOutlet var monsterImageView: UIImageView!
     
-    //モンスターを保存しておく配列
-    var monsterArray: [UIImage]!
+    //モンスターの名前を表示するラベル
+    @IBOutlet var monsterName: UILabel!
+    
+    var monsterArray: [UIImage]!    //モンスターを保存しておく配列
+    var nameArray: [String]!    //モンスターの名前を保存する配列
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,15 +41,31 @@ class ResultViewController: UIViewController {
                         UIImage(named: "monster009.png")!,
                         UIImage(named: "monster010.png")!,]
         
-        //ランダムに選んだモンスターを表示させる
+        //モンスターの名前を追加
+        nameArray = ["バケネコ",
+                     "ピンクフィッシュ",
+                     "アノマロカリス",
+                     "ダークエンジェル",
+                     "ホーリーナイト",
+                     "マグマドラゴ",
+                     "見習いマジシャン",
+                     "ミステリアスドラゴン",
+                     "テクニカルアシュラ",
+                     "サバト",]
+        
+        //ランダムに選んだモンスターと名前を表示させる
         monsterImageView.image = monsterArray[number]
+        monsterName.text = nameArray[number]
         
         if number == 9{
             haikeiImageView.image = UIImage(named: "bg_gold.png")
+            monsterName.textColor = UIColor.orange
         } else if number > 6{
             haikeiImageView.image = UIImage(named: "bg_red.png")
+            monsterName.textColor = UIColor.red
         } else {
             haikeiImageView.image = UIImage(named: "bg_blue.png")
+            monsterName.textColor = UIColor.blue
         }
     }
     

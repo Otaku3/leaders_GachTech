@@ -53,16 +53,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gacha.png" translatesAutoresizingMaskIntoConstraints="NO" id="0eX-Ky-Fy7">
-                                <rect key="frame" x="0.0" y="27" width="375" height="598"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_blue.png" translatesAutoresizingMaskIntoConstraints="NO" id="0eX-Ky-Fy7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="monster001.png" translatesAutoresizingMaskIntoConstraints="NO" id="qiC-w1-MkH">
-                                <rect key="frame" x="80" y="77" width="214" height="249"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="monster001.png" translatesAutoresizingMaskIntoConstraints="NO" id="qiC-w1-MkH">
+                                <rect key="frame" x="93" y="184" width="214" height="249"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQa-IO-RG6">
-                                <rect key="frame" x="59" y="441" width="106" height="56"/>
+                                <rect key="frame" x="16" y="506" width="106" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="もどる">
@@ -72,6 +72,14 @@
                                     <action selector="modoru" destination="Fe1-as-IwZ" eventType="touchUpInside" id="sGD-s1-VA9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAg-kr-TLd">
+                                <rect key="frame" x="53" y="121" width="288" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="avG-gX-9rK"/>
@@ -79,6 +87,7 @@
                     <connections>
                         <outlet property="haikeiImageView" destination="0eX-Ky-Fy7" id="zeN-Vj-idJ"/>
                         <outlet property="monsterImageView" destination="qiC-w1-MkH" id="VZX-ys-5GH"/>
+                        <outlet property="monsterName" destination="fAg-kr-TLd" id="h2q-L3-KGv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6l-Mg-vvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -87,6 +96,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg_blue.png" width="300" height="300"/>
         <image name="gacha.png" width="225" height="339"/>
         <image name="monster001.png" width="137" height="175"/>
     </resources>
