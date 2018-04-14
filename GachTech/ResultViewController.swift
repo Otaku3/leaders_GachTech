@@ -74,24 +74,31 @@ class ResultViewController: UIViewController {
         
         //アニメーション中でもtransformさせるキーパスを設定
         let animation = CABasicAnimation(keyPath: "transform")
+        let monsteranimation = CABasicAnimation(keyPath: "transform")
         
         //アニメーション開始時の数値
         animation.fromValue = NSNumber(value: 0)
+        monsteranimation.fromValue = NSNumber(value: 0)
         
         //アニメーション終了時の値
         animation.toValue = NSNumber(value: 2*Double.pi)
+        monsteranimation.toValue = NSNumber(value: 2*Double.pi)
         
         //z軸を中心としたアニメーションにする
         animation.valueFunction = CAValueFunction(name: kCAValueFunctionRotateZ)
+        monsteranimation.valueFunction = CAValueFunction(name: kCAValueFunctionRotateZ)
         
         //アニメーションの速さを指定する
         animation.duration = 5
+        monsteranimation.duration = 1
         
         //アニメーションの繰り返し回数を決定
         animation.repeatCount = Float.infinity
+        monsteranimation.repeatCount = 1
         
         //どのレイヤーをアニメーションさせるか指定
         haikeiImageView.layer.add(animation, forKey: nil)
+        monsterImageView.layer.add(monsteranimation, forKey: nil)
     }
     
     @IBAction func modoru(){
